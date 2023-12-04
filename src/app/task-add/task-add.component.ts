@@ -35,6 +35,8 @@ export class TaskAddComponent implements OnInit {
   }
 
   validateNameExists(control: AbstractControl) {
-    return this.service.nameExists(control.value)
+    const val =  this.service.nameExists(control.value)
+    val.subscribe(console.log)
+    return val
   }
 }
