@@ -1,15 +1,5 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  Output,
-  EventEmitter,
-  ChangeDetectionStrategy,
-  OnChanges,
-  SimpleChanges,
-  ChangeDetectorRef,
-} from '@angular/core';
-import { TaskModel } from '../models/task-model';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output,} from '@angular/core';
+import {TaskModel} from '../models/task-model';
 
 @Component({
   selector: 'app-task-presenter',
@@ -22,9 +12,6 @@ export class TaskPresenterComponent implements OnInit {
   @Output() clicked = new EventEmitter<TaskModel>();
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.task.name = this.task.name.toUpperCase();
-    }, 0);
   }
 
   public click() {
